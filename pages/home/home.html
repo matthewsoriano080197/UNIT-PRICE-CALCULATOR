@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Unit Price Saving Calculator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>CalcuMate: Unit Price Saving Calculator</h2>
+  <p>
+    Here with CalcuMate, you can calculate anything with one click! And that includes our Price Saving Calculator. Know how much you're spending depending on the product's weight or volume and know how much you actually spend 
+  </p>
+  <p>
+    Source: https://www.omnicalculator.com/everyday-life/unit-price
+  </p>
+<br />
+<img src="https://raw.githubusercontent.com/mariekatipunan/BMI-Calculator/master/BMI%20(1).png">
+
+<ion-label>
+  <h2> Option A:</h2> 
+</ion-label>
+<ion-item>
+  <ion-label>Volume in Milliliters:</ion-label>
+  <ion-input type="number" [(ngModel)]="Volume_M"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Cost:</ion-label>
+  <ion-input type="number" [(ngModel)]="Cost_A"></ion-input>
+</ion-item>
+
+<ion-label> 
+  <h2> Option B:</h2>
+</ion-label>
+<ion-item> 
+  <ion-label> Volume in Liters:</ion-label>
+  <ion-input type="number" [(ngModel)]="Volume_L"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Cost:</ion-label>
+  <ion-input type="number" [(ngModel)]="Cost_B"></ion-input>
+</ion-item>
+
+<button ion-button color="primary" (click)="computeCALCUMATE ()">CALCULATE</button>
+
+<ion-item *ngIf="FinalPrice">
+  <h2>Unit Price (A): {{UnitPrice_A}}<code></code></h2>
+  <h2>Unit Price (B): {{UnitPrice_B}}<code></code></h2>
+  <h2>Savings: {{Savings}}<code></code></h2>
+</ion-item>
