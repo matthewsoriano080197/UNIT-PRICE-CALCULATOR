@@ -14,7 +14,7 @@ export class HomePage {
   UnitPrice_A: number;
   UnitPrice_B: number; 
   Savings: number;
-  FinalPrice: number;
+
 
 
   constructor(public navCtrl: NavController) {}
